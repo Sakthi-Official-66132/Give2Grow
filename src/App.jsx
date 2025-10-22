@@ -16,6 +16,7 @@ import BrowseFood from './components/BrowseFood.jsx';
 import MyRequests from './components/MyRequests.jsx';
 import Request from './components/Request.jsx';
 import ImpactReports from './components/ImpactReports.jsx';
+import ProfileSettings from './components/ProfileSettings.jsx';
 import './index.css';
 
 const ProtectedRoute = ({ children }) => {
@@ -49,6 +50,7 @@ function App() {
             <Route path="/dashboard/requests" element={<ProtectedRoute><Layout><MyRequests /></Layout></ProtectedRoute>} />
             <Route path="/dashboard/request" element={<ProtectedRoute><Layout><Request /></Layout></ProtectedRoute>} />
             <Route path="/dashboard/reports" element={<ProtectedRoute><Layout><ImpactReports /></Layout></ProtectedRoute>} />
+            <Route path="/dashboard/settings" element={<ProtectedRoute><Layout><ProfileSettings /></Layout></ProtectedRoute>} />
             <Route 
               path="/auth" 
               element={
