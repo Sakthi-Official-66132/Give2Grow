@@ -251,10 +251,14 @@ const Layout = ({ children }) => {
                         <p className="text-xs text-gray-500">{user?.email}</p>
                         <p className="text-xs text-green-600 capitalize">{user?.role}</p>
                       </div>
-                      <button className="w-full text-left px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md flex items-center space-x-2">
+                      <Link 
+                        to="/dashboard/settings"
+                        className="w-full text-left px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md flex items-center space-x-2"
+                        onClick={() => setShowUserMenu(false)}
+                      >
                         <Settings className="h-4 w-4" />
                         <span>Settings</span>
-                      </button>
+                      </Link>
                       <button
                         onClick={logout}
                         className="w-full text-left px-3 py-2 text-sm text-red-600 hover:bg-red-50 rounded-md flex items-center space-x-2"
